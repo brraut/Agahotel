@@ -9,37 +9,61 @@ import About from "./pages/About";
 import Hotel from "./pages/Hotel";
 import Room from "./pages/Room";
 import FAQ from "./pages/FAQ";
+import AgaBrand from "./pages/AgaHotel/AgaBrand";
+import Register from "./pages/Register";
+import HotelBluBrand from "./pages/HotelBlu/HotelBluBrand";
+import LyfeBrand from "./pages/LyfeInn/LyfeBrand";
+import EarthBrand from "./pages/EarthInn/EarthBrand";
+import Supply from "./pages/Supply/Supply";
+
 
 function App() {
-	return (
-		<Router>
-			<MobileNavbar />
-			<div id="main">
-				<Switch>
-					<Route exact path="/">
-						<Home />
-					</Route>
-					<Route exact path="/about">
-						<About />
-					</Route>
-					<Route exact path="/brand">
-						<Brand />
-					</Route>
-          			<Route exact path="/hotel">
-            			<Hotel />
-          			</Route>
-          			<Route exact path="/room">
-            			<Room />
-          			</Route>
-					<Route exact path="/faq">
-            			<FAQ />
-          			</Route>
-					  
-				</Switch>
-				<Footer />
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <MobileNavbar />
+      <div id="main">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/brand">
+            <Brand />
+          </Route>
+          <Route exact path="/hotel">
+            <Hotel />
+          </Route>
+          <Route exact path="/room">
+            <Room />
+          </Route>
+          <Route exact path="/faq">
+            <FAQ />
+          </Route>
+          <Route exact path="/aga-hotels">
+            <AgaBrand />
+          </Route>
+          <Route exact path="/hotelblu">
+            <HotelBluBrand />
+          </Route>
+          <Route exact path="/lyfeinn">
+            <LyfeBrand />
+          </Route>
+          <Route exact path="/earthinn">
+            <EarthBrand />
+          </Route>
+          <Route exact path="/supply">
+            <Supply />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
