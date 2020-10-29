@@ -6,7 +6,8 @@ import BrandContact from "../../components/brand/BrandContact";
 import Experience from "../../components/BrandCommon/Experience";
 import Room from "../../components/BrandCommon/Room";
 
-export default function HotelBluBrand() {
+export default function HotelBluBrand(props) {
+  console.log(props)
   return (
     <>
       <BrandBanner />

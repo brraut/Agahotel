@@ -1,16 +1,23 @@
-import React, { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useParams } from "react-router-dom";
 import Slider from "react-slick";
+import BannerEffect from "../../helpers/BannerEffect";
 import SearchNavField from "../SearchNavField";
+import {useRouteMatch, useHistory} from 'react-router-dom'
+// import { param } from "jquery";
+import Axios from "axios"
+import axiosInstance from "../../helpers/axios";
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
 export default function BrandBanner() {
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  
   useEffect(() => {
     var navbar = document.getElementById("searchBar");
     window.onscroll = function () {
@@ -31,6 +38,7 @@ export default function BrandBanner() {
     document.getElementById("mySidenav").style.width = "250px";
   }
 
+
   return (
     <>
       <div className="banner">
@@ -38,7 +46,7 @@ export default function BrandBanner() {
           <div className="primary-navbar container">
             <Link to="/" className="logo-container">
               <img
-                src={require("../../assets/images/logo2.png")}
+                src={require("../../assets/images/coveraga.png")}
                 className="img-fluid"
                 alt=""
               />
