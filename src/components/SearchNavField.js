@@ -169,23 +169,9 @@ export default function SearchNavField() {
                 <span className="search-logo">
                   <i className="fas fa-users"></i>
                 </span>
-                <Field name="ocup">
-                  {({ form, field }) => {
-                    const { values, setFieldValue } = form;
-
-                    return (
-                      <input
-                        type="text"
-                        onClick={handleRoom}
-                        value={`${
-                          values.occupancy.length
-                        } Room ${values.occupancy
-                          .map((item) => item.adult)
-                          .reduce((curval, newval) => curval + newval)} Adult`}
-                      ></input>
-                    );
-                  }}
-                </Field>
+                <FormikControl
+                control="occupancy"
+                name="occupancy" />
                 {/* value={`${values.occupancy.length} Room ${adultNumber}`} */}
                 <div className="item-sup">Occupancy</div>
               </div>
