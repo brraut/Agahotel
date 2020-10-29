@@ -48,7 +48,7 @@ const RoomSelector = ({
 		<div className="header">
 			<div className="row room-content">
 				<div className="col-6">
-					<div className="room">
+					<div className="occupancy-room">
 						rooms
 					</div>
 					
