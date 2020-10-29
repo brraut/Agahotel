@@ -15,9 +15,9 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function BrandBanner() {
-
-  
+export default function BrandBanner(props) {
+  const {brand, banner} = props
+  console.log(brand)
   useEffect(() => {
     var navbar = document.getElementById("searchBar");
     window.onscroll = function () {
@@ -46,7 +46,7 @@ export default function BrandBanner() {
           <div className="primary-navbar container">
             <Link to="/" className="logo-container">
               <img
-                src={require("../../assets/images/coveraga.png")}
+                src={brand ? brand.logo: ''}
                 className="img-fluid"
                 alt=""
               />

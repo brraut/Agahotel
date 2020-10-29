@@ -4,7 +4,6 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker, DateRange } from "react-date-range";
 import { Field, ErrorMessage } from "formik";
 import {addDays} from 'date-fns'
-import $ from "jquery";
 
 const DatePicker = (props) => {
 	const {label, name,   ...rest} = props

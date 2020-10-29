@@ -6,11 +6,12 @@ import Location from "../../components/BrandCommon/Location";
 import Services from "../../components/LifeInn/Services";
 import Welcome from "../../components/LifeInn/Welcome";
 
-export default function LyfeBrand(props) {
-  console.log(props)
+export default function LyfeBrand({data}) {
+  console.log(data)
+  const {banner, brand, experience, services, ...rest} = data
   return (
     <>
-      <BrandBanner />
+      <BrandBanner brand={brand} banner={banner} />
       <div className="lyfe-brand">
 
         <Welcome />

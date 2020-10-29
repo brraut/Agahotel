@@ -96,6 +96,7 @@ export default function SearchNavField() {
 				onSubmit={(data, { setSubmitting }) => {
 					setSubmitting(true);
 					setSubmitting(false);
+					console.log(data)
 				}}
 				validationSchema={validationSchema}
 			>
@@ -139,23 +140,10 @@ export default function SearchNavField() {
 								<span>
 									<i className="fas fa-users"></i>
 								</span>
-								<Field name="ocup">
-									{({ form, field }) => {
-										const { values, setFieldValue } = form;
-										
-										return (
-											<input
-												type="text"
-												onClick={handleRoom}
-												value={`${
-													values.occupancy.length
-												} Room ${values.occupancy
-													.map((item) => item.adult)
-													.reduce((curval, newval) => curval + newval)} Adult`}
-											></input>
-										);
-									}}
-								</Field>
+								<FormikControl
+								name="occupancy"
+								control="occupancy"
+								/>
 								{/* value={`${values.occupancy.length} Room ${adultNumber}`} */}
 								<div className="item-sup">Occupancy</div>
 							</div>
@@ -186,6 +174,24 @@ export default function SearchNavField() {
 }
 
 
+
+{/* <Field name="ocup">
+									{({ form, field }) => {
+										const { values, setFieldValue } = form;
+										
+										return (
+											<input
+												type="text"
+												onClick={handleRoom}
+												value={`${
+													values.occupancy.length
+												} Room ${values.occupancy
+													.map((item) => item.adult)
+													.reduce((curval, newval) => curval + newval)} Adult`}
+											></input>
+										);
+									}}
+								</Field> */}
 
 
 
