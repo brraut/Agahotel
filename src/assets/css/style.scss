@@ -10,10 +10,17 @@ body {
   // , sans-serif;
 }
 .rdrDateRangeWrapper {
-  display: none !important;
-  margin-left: 150px;
+  // display: none !important;
+  // margin-left: 150px;
   z-index: 999;
   position: absolute !important;
+  left: -60px;
+  top: 126px;
+  border: 1px solid beige;
+  border-radius: 10px;
+}
+.rdrDateDisplayWrapper{
+  display: none;
 }
 .rdrMonthsVertical {
   flex-direction: row !important;
@@ -359,7 +366,7 @@ body {
     display: flex;
   }
   .mobile-checkdate {
-    width: 180px;
+    // width: 180px;
     display: flex;
     justify-content: space-between;
     .checkdate-wrapper {
@@ -371,7 +378,7 @@ body {
     }
   }
   .item {
-    padding: 60px 0px 20px 25px;
+    padding: 60px 20px 20px 20px;
     position: relative;
     color: #707070;
     font-size: 14px;
@@ -379,12 +386,13 @@ body {
     .item-sup {
       position: absolute;
       top: 10px;
-      left: 60px;
+      left: 0px;
+      text-align: center;
       right: 0;
       line-height: 45px;
       letter-spacing: 0.5px;
     }
-    span {
+    .search-logo {
       font-size: 16px;
       position: absolute;
     }
@@ -396,6 +404,7 @@ body {
       letter-spacing: 0.5px;
       padding: 0px 0px 4px 25px;
       width: 100%;
+      background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important;
       &:focus {
         outline: none;
         border-bottom: 1px solid #000;
@@ -417,6 +426,18 @@ body {
       }
     }
   }
+  .item:hover{
+    background-color: gainsboro;
+  }
+  .item-calender{
+    display: flex;
+    justify-content: space-between;
+    .sup-calendar{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
   .button-container {
     width: 15%;
     margin-left: 10px;
@@ -639,7 +660,7 @@ body {
       padding-top: 20px;
       .item-sup {
         top: -14px;
-        left: 30px;
+        left: 0px;
       }
     }
     .top-search-bar {
