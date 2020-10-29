@@ -6,7 +6,7 @@ import $ from 'jquery'
 const RoomSelector = ({
     form: {values, setFieldValue}
 }) => {
-    console.log(values)
+    // console.log(values)
     $(".option-content").focusout(function () {
         $(this).removeClass('active');
     });
