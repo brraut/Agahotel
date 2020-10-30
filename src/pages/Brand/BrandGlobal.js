@@ -1,48 +1,53 @@
-import React, {useState, useEffect} from 'react'
-import axiosInstance from '../../helpers/axios'
-import {useParams, useRouteMatch} from 'react-router-dom'
-import Axios from 'axios'
-import AgaBrand from '../AgaHotel/AgaBrand'
-import LyfeBrand from '../LyfeInn/LyfeBrand'
-import HotelBluBrand from '../HotelBlu/HotelBluBrand'
+import React, { useState, useEffect } from "react";
+import axiosInstance from "../../helpers/axios";
+import { useParams, useRouteMatch } from "react-router-dom";
+import Axios from "axios";
+import AgaBrand from "../AgaHotel/AgaBrand";
+import LyfeBrand from "../LyfeInn/LyfeBrand";
+import HotelBluBrand from "../HotelBlu/HotelBluBrand";
 
 function BrandGlobal() {
-let {slug} = useParams()
-  const[brandName, setBrandName] = useState(slug)
-  const [logo, setLogo] = useState()
-  const [brand, setBrand] = useState({})
 
-  console.log(slug)
+  let { slug } = useParams();
+//   console.log(useParams())
+  const [brandName, setBrandName] = useState(slug);
+  const [logo, setLogo] = useState();
+  const [brand, setBrand] = useState({});
 
-    useEffect(() => {
-        let source = Axios.CancelToken.source();
-        const loadData = async()=>{
-        try{
-            const response =  axiosInstance.get(`/brand/front/${slug}`,{
-                cancelToken: source.token
-            });
-        console.log((await response).data)
-        setLogo((await response).data.brand.logo)
-        setBrand((await response).data.brand)
-        }catch(error){
-            if(!Axios.isCancel(error)){
-                throw error
-            }
-        }return () => {
-          source.cancel();
+//   console.log(slug);
+
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get(`/brand/front/${slug}`, {
+          cancelToken: source.token,
+        });
+        console.log((await response).data);
+        
+        setLogo((await response).data.brand.logo);
+        setBrand((await response).data.brand);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
         }
       }
-      loadData();
-      }, [brandName])
-    
-    return (
-        <div>
-            { brand && brand.slug == "lifeinn" ?
-                <LyfeBrand props={brand} /> :
-                <HotelBluBrand props={brand} />
-            }
-        </div>
-    )
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, [brandName]);
+
+  return (
+    <div>
+      {brand && brand.slug == "lifeinn" ? (
+        <LyfeBrand data={brand} />
+      ) : (
+        <HotelBluBrand data={brand} />
+      )}
+    </div>
+  );
 }
 
-export default BrandGlobal
+export default BrandGlobal;
