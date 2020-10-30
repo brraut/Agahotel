@@ -5,7 +5,7 @@ import WeProvide from "../../components/AgaHotel/WeProvide";
 import DiscoverMore from "../../components/AgaHotel/DiscoverMore";
 import BrandContact from "../../components/brand/BrandContact";
 import Experience from "../../components/AgaHotel/Experience";
-import Room from "../../components/BrandCommon/Room";
+import Room from "../../components/BrandCommon/Room";P
 
 export default function AgaBrand() {
   return (

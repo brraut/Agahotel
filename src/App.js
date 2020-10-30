@@ -31,9 +31,9 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/brand">
+          {/* <Route exact path="/brand">
             <Brand />
-          </Route>
+          </Route> */}
           <Route exact path="/hotel">
             <Hotel />
           </Route>

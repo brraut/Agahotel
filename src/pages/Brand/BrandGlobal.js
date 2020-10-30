@@ -10,7 +10,7 @@ function BrandGlobal() {
 let {slug} = useParams()
   const[brandName, setBrandName] = useState(slug)
   const [logo, setLogo] = useState()
-  const [brand, setBrand] = useState({})
+  const [brand, setBrand] = useState()
 
   console.log(slug)
 
@@ -22,8 +22,8 @@ let {slug} = useParams()
                 cancelToken: source.token
             });
         console.log((await response).data)
-        setLogo((await response).data.brand.logo)
-        setBrand((await response).data.brand)
+        // setLogo((await response).data.brand.logo)
+        setBrand((await response).data)
         }catch(error){
             if(!Axios.isCancel(error)){
                 throw error
@@ -37,10 +37,12 @@ let {slug} = useParams()
     
     return (
         <div>
-            { brand && brand.slug == "lifeinn" ?
-                <LyfeBrand props={brand} /> :
-                <HotelBluBrand props={brand} />
-            }
+            { brand && brand.brand.slug == "lifeinn" ?
+                <LyfeBrand data={brand} /> :
+                brand && brand.brand.slug === "hotel-blu" ?
+                <HotelBluBrand data={brand} /> :
+                null
+        }   
         </div>
     )
 }

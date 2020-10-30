@@ -19,6 +19,7 @@ const settings = {
 export default function BrandBanner(props) {
   const {brand, banner} = props
   console.log(brand)
+  console.log(brand)
   useEffect(() => {
     var navbar = document.getElementById("searchBar");
     window.onscroll = function () {
@@ -105,7 +106,7 @@ export default function BrandBanner(props) {
             <div className="slider">
               <div className="img-container">
                 <img
-                  src={require("../../assets/images/coveraga.png")}
+                  src={banner && banner.image}
                   className="img-fluid"
                   alt=""
                 />
