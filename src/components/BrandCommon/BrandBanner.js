@@ -5,8 +5,9 @@ import BannerEffect from "../../helpers/BannerEffect";
 import SearchNavField from "../SearchNavField";
 import {useRouteMatch, useHistory} from 'react-router-dom'
 // import { param } from "jquery";
-import Axios from "axios"
-import axiosInstance from "../../helpers/axios";
+// import Axios from "axios"
+// import axiosInstance from "../../helpers/axios";
+
 const settings = {
   dots: true,
   infinite: true,
