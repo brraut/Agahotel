@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -16,6 +16,7 @@ import LyfeBrand from "./pages/LyfeInn/LyfeBrand";
 import EarthBrand from "./pages/EarthInn/EarthBrand";
 import Supply from "./pages/Supply/Supply";
 import BrandGlobal from "./pages/Brand/BrandGlobal";
+
 
 
 function App() {
