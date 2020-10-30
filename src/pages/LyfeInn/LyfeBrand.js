@@ -7,7 +7,7 @@ import Services from "../../components/LifeInn/Services";
 import Welcome from "../../components/LifeInn/Welcome";
 
 export default function LyfeBrand({data}) {
-  console.log(data)
+  console.log('apple')
   const {banner, brand, experience, services, ...rest} = data
   return (
     <>
@@ -15,7 +15,7 @@ export default function LyfeBrand({data}) {
       <div className="lyfe-brand">
 
         <Welcome />
-        <Services />
+        <Services services={services} />
         <Room />
         <Location />
         <BrandContact />
