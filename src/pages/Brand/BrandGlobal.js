@@ -9,8 +9,10 @@ import HotelBluBrand from '../HotelBlu/HotelBluBrand'
 function BrandGlobal() {
 let {slug} = useParams()
   const[brandName, setBrandName] = useState(slug)
-  const [brand, setBrand] = useState()
+  const [logo, setLogo] = useState()
+  const [brand, setBrand] = useState({})
 
+  console.log(slug)
 
     useEffect(() => {
         let source = Axios.CancelToken.source();
@@ -20,8 +22,8 @@ let {slug} = useParams()
                 cancelToken: source.token
             });
         console.log((await response).data)
-        // setLogo((await response).data.brand.logo)
-        setBrand((await response).data)
+        setLogo((await response).data.brand.logo)
+        setBrand((await response).data.brand)
         }catch(error){
             if(!Axios.isCancel(error)){
                 throw error
@@ -32,12 +34,12 @@ let {slug} = useParams()
       }
       loadData();
       }, [brandName])
-      
+    
     return (
         <div>
-            { brand && brand.brand.slug === "lifeinn" ?
-                <LyfeBrand data={brand} /> :
-                <HotelBluBrand data={brand} />
+            { brand && brand.slug == "lifeinn" ?
+                <LyfeBrand props={brand} /> :
+                <HotelBluBrand props={brand} />
             }
         </div>
     )

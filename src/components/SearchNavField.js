@@ -116,7 +116,6 @@ export default function SearchNavField() {
               </div>
 
               <div className="item item-calender">
-                <div>
                   <span className="search-logo">
                     <i class="fas fa-calendar-week"></i>
                   </span>
@@ -134,36 +133,7 @@ export default function SearchNavField() {
                       endDate={endDate}
                     />
                   </div>
-                </div>
-                {/* <div>
-                  <span className="search-logo">
-                    <i class="fas fa-calendar-week"></i>
-                  </span>
-
-                  <div className="mobile-checkdate">
-                    <FormikControl
-                      control="date"
-                      type="text"
-                      name="selectionRange"
-                      startDate={startDate}
-                      endDate={endDate}
-                    />
-                  </div>
-                </div> */}
               </div>
-              {/* <div className="item">
-                <span className="search-logo">
-                  <i class="fas fa-calendar-week"></i>
-                </span>
-                <div className="item-sup">Check out</div>
-                <div className="mobile-checkdate">
-                  <FormikControl
-                    control="date"
-                    type="text"
-                    name="selectionRange"
-                  />
-                </div>
-              </div> */}
 
               <div className="item">
                 <span className="search-logo">
