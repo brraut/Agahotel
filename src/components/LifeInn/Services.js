@@ -1,62 +1,32 @@
 import React from "react";
 
-function Services() {
+function Services(props) {
+  const {services} = props 
+  console.log(services)
   return (
     <>
       <div className="lyfeinn-services">
         <div className="header">Our Services</div>
 
         <div className="dis-container">
+          {services && 
+          services.map((service, index)=>
           <div className="discover-content">
             <div className="img-container">
               <img
                 className="img-fluid"
-                src={require("../../assets/images/breakfast.jpg")}
+                src={service.image}
                 alt=""
               />
             </div>
-            <div className="text">Breakfast in Bed</div>
+            <div className="text">{service.title}</div>
             <div className="overlay-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              pariatur assumenda nobis voluptatum deserunt sint error
-              voluptates!
+              {service.description}
             </div>
             <div className="overlay-color"></div>
           </div>
-
-          <div className="discover-content">
-            <div className="img-container">
-              <img
-                className="img-fluid"
-                src={require("../../assets/images/laundry.jpg")}
-                alt=""
-              />
-            </div>
-            <div className="text">Laundry</div>
-            <div className="overlay-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              pariatur assumenda nobis voluptatum deserunt sint error
-              voluptates!
-            </div>
-            <div className="overlay-color"></div>
-          </div>
-
-          <div className="discover-content">
-            <div className="img-container">
-              <img
-                className="img-fluid"
-                src={require("../../assets/images/gym1.jpg")}
-                alt=""
-              />
-            </div>
-            <div className="text">Indoor Gym</div>
-            <div className="overlay-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              pariatur assumenda nobis voluptatum deserunt sint error
-              voluptates!
-            </div>
-            <div className="overlay-color"></div>
-          </div>
+          )
+          }
         </div>
       </div>
     </>
