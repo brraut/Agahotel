@@ -111,9 +111,7 @@ export default function SearchNavField() {
               </div>
 
               <div className="item item-calender">
-                  <span className="search-logo">
-                    <i class="fas fa-calendar-week"></i>
-                  </span>
+                  
                   <div className="item-sup sup-calendar">
                     <div>Check In</div>
                     <div>Check Out</div>

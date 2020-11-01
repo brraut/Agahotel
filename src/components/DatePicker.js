@@ -34,41 +34,48 @@ const DatePicker = (props) => {
       {/* <label htmlFor={name}>{label}</label> */}
       <div className="row">
         <div className="col-6">
-        <Field name="checkin">
-          {
-            ({form}) => {
-              const {values} = form
-              return(
+          <span className="search-logo">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+          <Field name="checkin">
+            {({ form }) => {
+              const { values } = form;
+              return (
                 <>
-                  <input type="text" 
-                    value={format(values.selectionRange.startDate, "MMM dd yyyy")} 
-                    onClick={() => setOpen(!open)}>
-                  </input>
+                  <input
+                    type="text"
+                    value={format(
+                      values.selectionRange.startDate,
+                      "MMM dd yyyy"
+                    )}
+                    onClick={() => setOpen(!open)}
+                  ></input>
                 </>
-              )
-            }
-          }
+              );
+            }}
           </Field>
         </div>
         <div className="col-6">
+          <span className="search-logo">
+            <i class="fas fa-calendar-week"></i>
+          </span>
           <Field name="checkin">
-          {
-            ({form}) => {
-              const {values} = form
-              return(
+            {({ form }) => {
+              const { values } = form;
+              return (
                 <>
-                  <input type="text" 
-                    value={format(values.selectionRange.endDate, "MMM dd yyyy")} 
-                    onClick={() => setOpen(!open)}>
-                  </input>
+                  <input
+                    type="text"
+                    value={format(values.selectionRange.endDate, "MMM dd yyyy")}
+                    onClick={() => setOpen(!open)}
+                  ></input>
                 </>
-              )
-            }
-          }
+              );
+            }}
           </Field>
         </div>
       </div>
-      
+
       {open && (
         <Field name={name}>
           {({ form: { values, setFieldValue } }) => {
