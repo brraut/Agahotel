@@ -2400,6 +2400,8 @@ body {
 .brand-page .experience .img-container img {
   height: inherit;
   width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .brand-page .experience .main-title {
@@ -2883,6 +2885,8 @@ body {
 .experience .img-container img {
   height: inherit;
   width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .experience .main-title {

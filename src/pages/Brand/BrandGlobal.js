@@ -5,6 +5,7 @@ import Axios from "axios";
 import AgaBrand from "../AgaHotel/AgaBrand";
 import LyfeBrand from "../LyfeInn/LyfeBrand";
 import HotelBluBrand from "../HotelBlu/HotelBluBrand";
+import EarthBrand from "../EarthInn/EarthBrand";
 
 function BrandGlobal() {
   let { slug } = useParams();
@@ -19,7 +20,7 @@ function BrandGlobal() {
         const response = axiosInstance.get(`/brand/front/${slug}`, {
           cancelToken: source.token,
         });
-        console.log((await response).data);
+        // console.log((await response).data);
         // setLogo((await response).data.brand.logo)
         setBrand((await response).data);
       } catch (error) {
@@ -40,6 +41,10 @@ function BrandGlobal() {
         <LyfeBrand data={brand} />
       ) : brand && brand.brand.slug === "hotel-blu" ? (
         <HotelBluBrand data={brand} />
+      ) : brand && brand.brand.slug === "earth-inn" ? (
+        <EarthBrand data={brand} />
+      ) : brand && brand.brand.slug === "aga-hotel" ? (
+        <AgaBrand data={brand} />
       ) : null}
     </div>
   );
