@@ -16,6 +16,7 @@ import LyfeBrand from "./pages/LyfeInn/LyfeBrand";
 import EarthBrand from "./pages/EarthInn/EarthBrand";
 import Supply from "./pages/Supply/Supply";
 import BrandGlobal from "./pages/Brand/BrandGlobal";
+import Franchise from "./pages/Franchise";
 
 
 
@@ -46,15 +47,9 @@ function App() {
           <Route exact path="/brand/:slug">
             <BrandGlobal />
           </Route>
-          {/* <Route exact path="/hotelblu">
-            <HotelBluBrand />
+          <Route exact path="/franchise">
+            <Franchise />
           </Route>
-          <Route exact path="/lifeinn">
-            <LyfeBrand />
-          </Route>
-          <Route exact path="/earthinn">
-            <EarthBrand />
-          </Route> */}
           <Route exact path="/supply">
             <Supply />
           </Route>

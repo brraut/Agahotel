@@ -50,7 +50,21 @@ const RoomSelector = (props) => {
 
   return (
     <div ref={node}>
-      <Field type="text" name={name}  onClick={() => setOpen(!open)} />
+      <Field type="text" name={name}   >
+        {
+          ({form})=>{
+            const {values} = form
+            return (
+              <>
+                <input type="text" 
+                value={`${ values.occupancy.length } Room ${values.occupancy .map((item) => item.adult) .reduce((curval, newval) => curval + newval)} Adult`}
+                onClick={() => setOpen(!open)}
+                />
+              </>
+            )
+          }
+        }
+      </Field>
       {open && (
         <FieldArray name="occupancy">
           {(arrayHelpers) => (
