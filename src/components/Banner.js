@@ -57,7 +57,7 @@ export default function Banner() {
 									<a href="">Bookings</a>
 								</li>
 								<li>
-									<a href="">FAQ</a>
+									<Link to="/faq">FAQ</Link>
 								</li>
 								<li>
 									<select name="" id="">
@@ -81,7 +81,7 @@ export default function Banner() {
 									<NavLink to="/franchise">Franchise</NavLink>
 								</li>
 								<li>
-									<a href="">Join Us</a>
+									<Link to="/register">Join Us</Link>
 								</li>
 							</ul>
 						</div>

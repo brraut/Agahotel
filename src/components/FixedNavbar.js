@@ -59,7 +59,7 @@ export default function FixedNavbar() {
 									<NavLink to="/franchise">Franchise</NavLink>
 								</li>
 								<li>
-									<a href="">Join Us</a>
+									<Link to="/register">Join Us</Link>
 								</li>
             </ul>
           </div>
