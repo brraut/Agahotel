@@ -8,6 +8,7 @@ export default function BrandSection() {
 	const [brands, setBrands] = useState([])
 
 	useEffect(() => {
+
 		let source = Axios.CancelToken.source();
 		const loadData = async() =>{
 			try{
@@ -26,7 +27,8 @@ export default function BrandSection() {
 		}
 		loadData();
 	}, [])
-	console.log(brands)
+  console.log(brands)
+
     return (
         <>
          <div className="brands">

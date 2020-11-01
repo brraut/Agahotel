@@ -18,8 +18,7 @@ const settings = {
 
 export default function BrandBanner(props) {
   const {brand, banner} = props
-  console.log(brand)
-  console.log(brand)
+  
   useEffect(() => {
     var navbar = document.getElementById("searchBar");
     window.onscroll = function () {
