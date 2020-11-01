@@ -71,7 +71,7 @@ const FAQContent = () => {
                         <>
                             {faq &&
                             faq.map((data, index)=> (
-                                <li key={`${data.slug}_${data.id}`}><a className="faq-btn " onClick={()=> handleActive(data.slug)}>{data.title}</a> </li>
+                                <li key={`${data.slug}_${data.id}`}><a className="faq-btn  " onClick={()=> handleActive(data.slug)}>{data.title}</a> </li>
                             ))}
                         </>                       
                         </ul>

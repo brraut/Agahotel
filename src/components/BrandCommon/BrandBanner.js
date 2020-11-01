@@ -45,13 +45,13 @@ export default function BrandBanner(props) {
       <div className="banner">
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
-            {/* <Link to="/" className="logo-container"> */}
+            <Link to="/" className="logo-container">
               <img
                 src={brand ? brand.logo: ''}
                 className="img-fluid"
                 alt=""
               />
-            {/* </Link> */}
+            </Link>
             <div className="primary-content">
               <ul className="first-navbar-wrapper">
                 <li>
