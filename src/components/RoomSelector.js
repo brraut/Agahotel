@@ -160,7 +160,7 @@ const RoomSelector = (props) => {
                         <div className="col-6">
                           <div className="number">
                             <div>
-                              {arrayHelpers.form.values.occupancy[index].child > 1 &&
+                              {arrayHelpers.form.values.occupancy[index].child > 0 &&
                               <i
                                 id="minus"
                                 className="fas fa-minus-circle"

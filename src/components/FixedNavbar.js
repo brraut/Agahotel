@@ -45,7 +45,7 @@ export default function FixedNavbar() {
               </li>
             </ul>
             <ul className="second-navbar-wrapper">
-            <li>
+                <li>
 									<NavLink to="/deal" >Deals</NavLink>
 								</li>
 
