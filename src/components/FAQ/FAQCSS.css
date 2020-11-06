@@ -5,20 +5,22 @@
 }
 
 #faq .faq-container .header {
-  margin-top: 50px;
+  margin-top: 160px;
   margin-bottom: 100px;
   text-align: center;
 }
 
 #faq .faq-container .header .title {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 20px;
   color: #212529;
+  font-family: "Lora", serif;
 }
 
 #faq .faq-container .header .text {
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
 #faq .faq-container .faq-links {
@@ -46,19 +48,20 @@
 }
 
 #faq .faq-container .faq-links li a {
-  font-size: 14px;
+  font-size: 15px;
   color: #707070;
   -webkit-transition: font-size 1s;
   transition: font-size 1s;
+  font-family: "Lora", serif;
 }
 
 #faq .faq-container .faq-links li a:hover {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #faq .faq-container .faq-links .active {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
   color: #212529;
 }
@@ -75,6 +78,7 @@
   align-items: center;
   font-size: 14px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #faq .faq-container .faq-content .text .ques {
@@ -83,6 +87,8 @@
   flex: 2;
   text-align: center;
   font-weight: 500;
+  color: #313131;
+  font-size: 15px;
 }
 
 #faq .faq-container .faq-content .text .arrow {
@@ -93,7 +99,7 @@
 }
 
 #faq .faq-container .faq-content .text .arrow i {
-  font-size: 8px;
+  font-size: 12px;
 }
 
 #faq .faq-container .faq-content .para {
@@ -108,7 +114,7 @@
 }
 
 #faq .faq-form-container {
-  margin-top: 150px;
+  margin-top: 180px;
   margin-bottom: 50px;
   padding: 10px;
 }
@@ -117,12 +123,14 @@
   text-align: center;
   font-size: 30px;
   margin-bottom: 10px;
-  font-weight: 800;
+  font-weight: 400;
+  font-family: "Lora", serif;
 }
 
 #faq .faq-form-container .sub-header {
   text-align: center;
   font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 #faq .faq-form-container .faq-form {
@@ -174,4 +182,20 @@
 
 #faq .faq-form-container .faq-form .form-btn button:hover {
   text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  #faq .faq-container .header {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  #faq .faq-container .faq-links {
+    margin-bottom: 60px;
+  }
+  #faq .faq-form-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 10px;
+  }
 }
